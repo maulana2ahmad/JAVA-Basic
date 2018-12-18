@@ -1,23 +1,36 @@
 package com.example.calculations;
 
 import javax.swing.*;
+import java.text.DecimalFormat;
 
 public class RunningTotals
 {
     public static void main(String[] args)
     {
-        int maxValue;
+        int days;
+        double sales;
+        double totalSales = 0.0; // running total
 
-        String input = JOptionPane.showInputDialog("How high should i go to squer the number");
+        DecimalFormat dolar = new DecimalFormat("#,##0.00"); //2000.000 -> dibulatkan
 
-        maxValue = Integer.parseInt(input);
+        String input = JOptionPane.showInputDialog("Untuk berapa hari Anda punya penjualan " + "Angka");
+        days = Integer.parseInt(input);
 
-        System.out.println("Number    Number Squared");
-        System.out.println("==========================");
-
-        for (int number = 1; number <= maxValue; number++)
+        for (int count = 1; count <= days; count++)
         {
-            System.out.println(number + "\t\t\t" + number*maxValue);
+            input = JOptionPane.showInputDialog("Masukkan penjualan selama berhari-hari " + count);
+
+            sales = Double.parseDouble(input);
+
+            //totalSales = totalSales + sales; // sama saja dengan (totalSales += sales;)
+
+            totalSales += sales;
         }
+
+        JOptionPane.showMessageDialog(null, "Total penjualan: $ " + dolar.format(totalSales));
+
+        System.exit(0);
+
+
     }
 }

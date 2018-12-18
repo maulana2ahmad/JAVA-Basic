@@ -4,5 +4,24 @@ import javax.swing.*;
 
 public class SentinelValues
 {
+    public static void main(String[] srgs)
+    {
+        int value;
+        int doubleValue;
 
+        String input = JOptionPane.showInputDialog("Harap masukkan nilai untuk menggandakan" + "(0 untuk menghentikan)");
+        value = Integer.parseInt(input);
+
+        while (value != 0)
+        {
+            doubleValue = value * 2;
+
+            JOptionPane.showMessageDialog(null, " " + value + " double is " + doubleValue);
+
+            input = JOptionPane.showInputDialog("Please enter a value to double " + "( 0 to stop )");
+            value = Integer.parseInt(input);
+        }
+
+        System.exit(0);
+    }
 }
