@@ -15,25 +15,26 @@ public class ExamPaper
 
     public Student getStudent()
     {
-        return student;
+        return new Student(student);
     }
 
     public void setStudent(Student student)
     {
-        this.student = student;
+        this.student = new Student(student);
     }
 
     public Subject getSubject()
     {
-        return subject;
+        return new Subject(subject);
     }
 
     public void setSubject(Subject subject)
     {
-        this.subject = subject;
+        this.subject = new Subject(subject);
     }
 
     public int getMarks()
+
     {
         return marks;
     }
@@ -41,5 +42,13 @@ public class ExamPaper
     public void setMarks(int marks)
     {
         this.marks = marks;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Examp papper informatian: \n" +
+                student + "\n" + subject + "\n" +
+                "Marks: " + marks;
     }
 }

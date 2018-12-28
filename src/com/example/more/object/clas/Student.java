@@ -20,7 +20,7 @@ public class Student
 
     public boolean equals(Student object)
     {
-        return (this.studentNumber == object.studentNumber && this.studentName.equals(object.studentName))
+        return (this.studentNumber == object.studentNumber && this.studentName.equals(object.studentName));
     }
 
     //getter and setter
@@ -50,6 +50,6 @@ public class Student
     {
         return "The Information: \n " +
                 "Student Name: " + studentName + "\n" +
-                "Student Nuber: " + studentNumber;
+                "Student Nuber: " + studentNumber + "\n" + "\n";
     }
 }

@@ -44,7 +44,7 @@ public class Subject
     @Override
     public String toString()
     {
-        return "Sibject information: \n" +
+        return "Subject information: \n " +
                 "Subject Code: " + subjectCode + "\n" +
                 "Subject Name: " + subjectName;
     }
